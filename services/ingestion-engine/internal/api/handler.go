@@ -18,11 +18,6 @@ type Handler struct {
 // GetTelemetry handles GET /telemetry
 // Returns an array of current meter readings.
 func (h *Handler) GetTelemetry(w http.ResponseWriter, r *http.Request) {
-	// 1. CORS Headers (Crucial for Local Dev & Frontend Integration)
-	w.Header().Set("Access-Control-Allow-Origin", "*")
-	w.Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
-	w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
-
 	// Handle Preflight requests
 	if r.Method == "OPTIONS" {
 		w.WriteHeader(http.StatusOK)

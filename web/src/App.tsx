@@ -26,7 +26,7 @@ const App: React.FC = () => {
         <div style={styles.page}>
             <header style={styles.nav}>
                 <h1 style={styles.logo}>PowerGrid <span style={{fontWeight: 'normal', fontSize: '0.6em'}}>Intelligent CoE Core</span></h1>
-                <div style={styles.user}>{isAuthenticated ? "👤 Admin User (Fortum)" : "Connecting..."}</div>
+                <div style={styles.user}>{isAuthenticated ? "👤 Admin User (Nahasat)" : "Connecting..."}</div>
             </header>
 
             <main style={styles.main}>

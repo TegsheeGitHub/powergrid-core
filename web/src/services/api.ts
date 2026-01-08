@@ -4,8 +4,9 @@
  */
 import axios from 'axios';
 
-// The Gateway URL (Accessing Nginx from the browser's perspective)
-const GATEWAY_URL = 'http://localhost:8080';
+// VITE MIGRATION: Use import.meta.env instead of process.env
+// We provide a fallback to localhost for safety
+const GATEWAY_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080';
 
 // Interfaces for Type Safety (Matches the Backend Go/Python models)
 export interface EnergyReading {

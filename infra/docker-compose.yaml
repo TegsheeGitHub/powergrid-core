@@ -1,8 +1,6 @@
 # -----------------------------------------------------------------------------
 # PowerGrid Local Orchestration
 # -----------------------------------------------------------------------------
-version: '3.8'
-
 services:
   # ---------------------------------------------------------------------------
   # Service 1: Ingestion Engine (Go)
@@ -21,7 +19,7 @@ services:
       - powergrid-net
 
   # ---------------------------------------------------------------------------
-  # Service 2: Intelligence API (Python/FastAPI)
+  # Service 2: Intelligence API (Python / FastAPI)
   # Handles RAG and Regulatory Compliance queries.
   # ---------------------------------------------------------------------------
   intelligence-api:
@@ -37,7 +35,7 @@ services:
 
   # ---------------------------------------------------------------------------
   # Service 3: API Gateway (Nginx)
-  # The single entry point simulating Azure API Management.
+  # Single entry point simulating Azure API Management.
   # ---------------------------------------------------------------------------
   gateway:
     build:
@@ -53,7 +51,7 @@ services:
       - powergrid-net
 
   # ---------------------------------------------------------------------------
-  # Service 4: Frontend (React)
+  # Service 4: Frontend (React - CRA)
   # Simulates the SharePoint Web Part / Power App.
   # ---------------------------------------------------------------------------
   web:
@@ -64,10 +62,20 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - REACT_APP_API_URL=http://localhost:8080/api
+      - VITE_API_URL=http://localhost:8080
+      # CRA / Docker file-watching fixes
+      - WDS_SOCKET_PORT=0
+      - CHOKIDAR_USEPOLLING=true
+    volumes:
+      # Live reload for source code only
+      - ../web/src:/app/src
+      - ../web/public:/app/public
     networks:
       - powergrid-net
 
+# -----------------------------------------------------------------------------
+# Networks
+# -----------------------------------------------------------------------------
 networks:
   powergrid-net:
     driver: bridge

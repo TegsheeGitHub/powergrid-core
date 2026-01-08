@@ -17,15 +17,6 @@ app = FastAPI(
 # Initialize Service
 engine = IntelligenceEngine()
 
-# CORS Configuration
-# Allows the React Frontend to talk to this directly during development if needed.
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 @app.get("/health")
 async def health_check():
