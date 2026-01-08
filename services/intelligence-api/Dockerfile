@@ -1,0 +1,24 @@
+# -----------------------------------------------------------------------------
+# PYTHON RUNTIME
+# -----------------------------------------------------------------------------
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Prevent Python from writing pyc files to disc and buffering stdout
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# Install dependencies
+COPY requirements.txt .
+# RUN pip install --no-cache-dir -r requirements.txt
+# Commented out actual install until requirements are populated in Phase 3
+
+COPY . .
+
+# Expose internal port
+EXPOSE 8000
+
+# CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Temporary CMD to keep container alive during Phase 1
+CMD ["tail", "-f", "/dev/null"]

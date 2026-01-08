@@ -1,0 +1,73 @@
+# -----------------------------------------------------------------------------
+# PowerGrid Local Orchestration
+# -----------------------------------------------------------------------------
+version: '3.8'
+
+services:
+  # ---------------------------------------------------------------------------
+  # Service 1: Ingestion Engine (Go)
+  # Simulates high-frequency energy meters.
+  # ---------------------------------------------------------------------------
+  ingestion-engine:
+    build: 
+      context: ../services/ingestion-engine
+      dockerfile: Dockerfile
+    container_name: powergrid-ingestion
+    restart: always
+    environment:
+      - PORT=8080
+      - LOG_LEVEL=debug
+    networks:
+      - powergrid-net
+
+  # ---------------------------------------------------------------------------
+  # Service 2: Intelligence API (Python/FastAPI)
+  # Handles RAG and Regulatory Compliance queries.
+  # ---------------------------------------------------------------------------
+  intelligence-api:
+    build:
+      context: ../services/intelligence-api
+      dockerfile: Dockerfile
+    container_name: powergrid-intelligence
+    restart: always
+    environment:
+      - PORT=8000
+    networks:
+      - powergrid-net
+
+  # ---------------------------------------------------------------------------
+  # Service 3: API Gateway (Nginx)
+  # The single entry point simulating Azure API Management.
+  # ---------------------------------------------------------------------------
+  gateway:
+    build:
+      context: ../services/gateway
+      dockerfile: Dockerfile
+    container_name: powergrid-gateway
+    ports:
+      - "8080:80" # Host Port 8080 -> Container Port 80
+    depends_on:
+      - ingestion-engine
+      - intelligence-api
+    networks:
+      - powergrid-net
+
+  # ---------------------------------------------------------------------------
+  # Service 4: Frontend (React)
+  # Simulates the SharePoint Web Part / Power App.
+  # ---------------------------------------------------------------------------
+  web:
+    build:
+      context: ../web
+      dockerfile: Dockerfile
+    container_name: powergrid-web
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:8080/api
+    networks:
+      - powergrid-net
+
+networks:
+  powergrid-net:
+    driver: bridge
