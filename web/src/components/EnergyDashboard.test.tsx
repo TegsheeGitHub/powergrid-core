@@ -1,3 +1,5 @@
+// web/src/components/EnergyDashboard.test.tsx
+
 import { render, screen, waitFor } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import EnergyDashboard from './EnergyDashboard';

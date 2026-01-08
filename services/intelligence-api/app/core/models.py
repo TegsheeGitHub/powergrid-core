@@ -1,3 +1,5 @@
+# services/intelligence-api/app/core/models.py
+
 """
 Models Definition.
 Pydantic models ensure data validation and generate the OpenAPI schema 

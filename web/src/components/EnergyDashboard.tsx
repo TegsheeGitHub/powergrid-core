@@ -1,3 +1,5 @@
+// web/src/components/EnergyDashboard.tsx
+
 /**
  * EnergyDashboard Component.
  * Displays a live grid of smart meter readings.

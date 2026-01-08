@@ -1,3 +1,5 @@
+// ingestion-engine/internal/domain/simulator.go
+
 /*
 Package domain includes the Simulator service.
 This service manages the lifecycle of simulated devices and holds the

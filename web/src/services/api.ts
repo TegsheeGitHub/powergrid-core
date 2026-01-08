@@ -1,3 +1,5 @@
+// web/src/services/api.ts
+
 /**
  * API Service Layer.
  * Centralizes all HTTP communication with the Nginx Gateway.

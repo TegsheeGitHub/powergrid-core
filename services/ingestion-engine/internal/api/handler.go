@@ -1,3 +1,5 @@
+// ingestion-engine/internal/api/handler.go
+
 /*
 Package api handles HTTP requests and responses.
 It adheres to REST principles and outputs JSON compatible with OData/PowerPlatform.

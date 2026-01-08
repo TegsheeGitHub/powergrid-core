@@ -1,3 +1,5 @@
+// web/src/components/CopilotChat.tsx
+
 /**
  * CopilotChat Component.
  * An interface to interact with the Compliance AI Agent.

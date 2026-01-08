@@ -1,3 +1,5 @@
+// ingestion-engine/internal/domain/reading.go
+
 /*
 Package domain defines the core business objects and logic for the Ingestion Engine.
 It contains the data structures for Energy Readings and the logic to simulate

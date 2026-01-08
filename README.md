@@ -3,9 +3,9 @@
 > **A Cloud-Native Microservices Platform for Real-Time Energy Telemetry & AI Compliance.**
 > *Built for the Center of Excellence (CoE) Technical Challenge.*
 
-[![powergrid-core Demo](https://img.youtube.com/vi/w8wlRdG_ufo/maxresdefault.jpg)](https://youtu.be/w8wlRdG_ufo)
+[![powergrid-core Demo](https://img.youtube.com/vi/ZqqhYOv_yfg/maxresdefault.jpg)](https://youtu.be/ZqqhYOv_yfg)
 
-> 📺 **[Watch the Architectural Demo](https://youtu.be/w8wlRdG_ufo)** featuring core functionalities.
+> 📺 **[Watch the Architectural Demo](https://youtu.be/ZqqhYOv_yfg)** featuring core functionalities.
 
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-success?style=for-the-badge)
 ![Architecture](https://img.shields.io/badge/Architecture-Microservices-blueviolet?style=for-the-badge)
@@ -92,6 +92,15 @@ This project uses a **Makefile** to automate all development tasks, ensuring a s
 * Go (v1.21+)
 * Python (v3.10+)
 
+### Environment Variables
+
+Create a `.env` file inside services/intelligence-api:
+
+``` ini
+OPENAI_API_KEY="sk-..."
+PORT=8000
+```
+
 ### 1. Build and Run
 
 Launch the entire stack (Frontend, Backend, Gateway) with a single command:
@@ -101,8 +110,8 @@ make up
 
 ```
 
-* **Dashboard:** [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000)
-* **API Gateway:** [http://localhost:8080](https://www.google.com/search?q=http://localhost:8080)
+* **Dashboard:** [http://localhost:3000]
+* **API Gateway:** [http://localhost:8080]
 
 ### 2. View Logs
 

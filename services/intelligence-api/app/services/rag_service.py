@@ -1,3 +1,5 @@
+# services/intelligence-api/app/services/rag_service.py
+
 """
 RAG Service.
 Handles the logic of retrieving context and querying the LLM.

@@ -1,3 +1,5 @@
+// web/src/App.tsx
+
 /**
  * Main Application Layout.
  * Simulates a SharePoint/Power BI Dashboard.
